@@ -28,34 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            progressBar1 = new ProgressBar();
+            pgbSurveyProgress = new ProgressBar();
             label1 = new Label();
-            groupBox1 = new GroupBox();
-            noiseRadio3 = new RadioButton();
+            grpNoise = new GroupBox();
+            rdoNoiseNormal = new RadioButton();
             label2 = new Label();
-            noiseRadio2 = new RadioButton();
-            noiseRadio1 = new RadioButton();
-            groupBox2 = new GroupBox();
+            rdoNoiseSemiSilent = new RadioButton();
+            rdoNoiseSilent = new RadioButton();
+            grpType = new GroupBox();
             label3 = new Label();
-            feelRadio2 = new RadioButton();
-            feelRadio1 = new RadioButton();
-            groupBox3 = new GroupBox();
-            btnFindSwit = new Button();
-            pressureRadio3 = new RadioButton();
+            rdoTypeTactile = new RadioButton();
+            rdoTypeLinear = new RadioButton();
+            grpPressure = new GroupBox();
+            rdoPressureHigh = new RadioButton();
             label4 = new Label();
-            pressureRadio2 = new RadioButton();
-            pressureRadio1 = new RadioButton();
-            groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
-            groupBox3.SuspendLayout();
+            rdoPressureMid = new RadioButton();
+            rdoPressureLow = new RadioButton();
+            btnSubmitSurvey = new Button();
+            grpNoise.SuspendLayout();
+            grpType.SuspendLayout();
+            grpPressure.SuspendLayout();
             SuspendLayout();
             // 
-            // progressBar1
+            // pgbSurveyProgress
             // 
-            progressBar1.Location = new Point(24, 486);
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(576, 23);
-            progressBar1.TabIndex = 0;
+            pgbSurveyProgress.Location = new Point(24, 486);
+            pgbSurveyProgress.Name = "pgbSurveyProgress";
+            pgbSurveyProgress.Size = new Size(576, 23);
+            pgbSurveyProgress.TabIndex = 0;
             // 
             // label1
             // 
@@ -67,28 +67,29 @@
             label1.TabIndex = 0;
             label1.Text = "나에게 맞는 축 진단하기";
             // 
-            // groupBox1
+            // grpNoise
             // 
-            groupBox1.Controls.Add(noiseRadio3);
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(noiseRadio2);
-            groupBox1.Controls.Add(noiseRadio1);
-            groupBox1.Location = new Point(24, 80);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(726, 129);
-            groupBox1.TabIndex = 1;
-            groupBox1.TabStop = false;
+            grpNoise.Controls.Add(rdoNoiseNormal);
+            grpNoise.Controls.Add(label2);
+            grpNoise.Controls.Add(rdoNoiseSemiSilent);
+            grpNoise.Controls.Add(rdoNoiseSilent);
+            grpNoise.Location = new Point(24, 80);
+            grpNoise.Name = "grpNoise";
+            grpNoise.Size = new Size(726, 129);
+            grpNoise.TabIndex = 1;
+            grpNoise.TabStop = false;
             // 
-            // noiseRadio3
+            // rdoNoiseNormal
             // 
-            noiseRadio3.AutoSize = true;
-            noiseRadio3.Location = new Point(6, 98);
-            noiseRadio3.Name = "noiseRadio3";
-            noiseRadio3.Size = new Size(230, 19);
-            noiseRadio3.TabIndex = 0;
-            noiseRadio3.TabStop = true;
-            noiseRadio3.Text = "소음 상관없음 / 시원하고 경쾌한 소리";
-            noiseRadio3.UseVisualStyleBackColor = true;
+            rdoNoiseNormal.AutoSize = true;
+            rdoNoiseNormal.Location = new Point(6, 98);
+            rdoNoiseNormal.Name = "rdoNoiseNormal";
+            rdoNoiseNormal.Size = new Size(230, 19);
+            rdoNoiseNormal.TabIndex = 0;
+            rdoNoiseNormal.TabStop = true;
+            rdoNoiseNormal.Text = "소음 상관없음 / 시원하고 경쾌한 소리";
+            rdoNoiseNormal.UseVisualStyleBackColor = true;
+            rdoNoiseNormal.CheckedChanged += RadioButton_CheckedChanged;
             // 
             // label2
             // 
@@ -100,38 +101,40 @@
             label2.TabIndex = 0;
             label2.Text = "Q1. 사용 장소 및 소음 민감도";
             // 
-            // noiseRadio2
+            // rdoNoiseSemiSilent
             // 
-            noiseRadio2.AutoSize = true;
-            noiseRadio2.Location = new Point(6, 73);
-            noiseRadio2.Name = "noiseRadio2";
-            noiseRadio2.Size = new Size(257, 19);
-            noiseRadio2.TabIndex = 0;
-            noiseRadio2.TabStop = true;
-            noiseRadio2.Text = "방, 개인 공간 / 정숙하되 약간의 타격음 OK";
-            noiseRadio2.UseVisualStyleBackColor = true;
+            rdoNoiseSemiSilent.AutoSize = true;
+            rdoNoiseSemiSilent.Location = new Point(6, 73);
+            rdoNoiseSemiSilent.Name = "rdoNoiseSemiSilent";
+            rdoNoiseSemiSilent.Size = new Size(257, 19);
+            rdoNoiseSemiSilent.TabIndex = 0;
+            rdoNoiseSemiSilent.TabStop = true;
+            rdoNoiseSemiSilent.Text = "방, 개인 공간 / 정숙하되 약간의 타격음 OK";
+            rdoNoiseSemiSilent.UseVisualStyleBackColor = true;
+            rdoNoiseSemiSilent.CheckedChanged += RadioButton_CheckedChanged;
             // 
-            // noiseRadio1
+            // rdoNoiseSilent
             // 
-            noiseRadio1.AutoSize = true;
-            noiseRadio1.Location = new Point(6, 48);
-            noiseRadio1.Name = "noiseRadio1";
-            noiseRadio1.Size = new Size(193, 19);
-            noiseRadio1.TabIndex = 0;
-            noiseRadio1.TabStop = true;
-            noiseRadio1.Text = "사무실, 도서관 / 극저소음 필수";
-            noiseRadio1.UseVisualStyleBackColor = true;
+            rdoNoiseSilent.AutoSize = true;
+            rdoNoiseSilent.Location = new Point(6, 48);
+            rdoNoiseSilent.Name = "rdoNoiseSilent";
+            rdoNoiseSilent.Size = new Size(193, 19);
+            rdoNoiseSilent.TabIndex = 0;
+            rdoNoiseSilent.TabStop = true;
+            rdoNoiseSilent.Text = "사무실, 도서관 / 극저소음 필수";
+            rdoNoiseSilent.UseVisualStyleBackColor = true;
+            rdoNoiseSilent.CheckedChanged += RadioButton_CheckedChanged;
             // 
-            // groupBox2
+            // grpType
             // 
-            groupBox2.Controls.Add(label3);
-            groupBox2.Controls.Add(feelRadio2);
-            groupBox2.Controls.Add(feelRadio1);
-            groupBox2.Location = new Point(24, 215);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(726, 111);
-            groupBox2.TabIndex = 1;
-            groupBox2.TabStop = false;
+            grpType.Controls.Add(label3);
+            grpType.Controls.Add(rdoTypeTactile);
+            grpType.Controls.Add(rdoTypeLinear);
+            grpType.Location = new Point(24, 215);
+            grpType.Name = "grpType";
+            grpType.Size = new Size(726, 111);
+            grpType.TabIndex = 1;
+            grpType.TabStop = false;
             // 
             // label3
             // 
@@ -143,60 +146,53 @@
             label3.TabIndex = 0;
             label3.Text = "Q2. 선호하는 키감 (손맛)";
             // 
-            // feelRadio2
+            // rdoTypeTactile
             // 
-            feelRadio2.AutoSize = true;
-            feelRadio2.Location = new Point(6, 73);
-            feelRadio2.Name = "feelRadio2";
-            feelRadio2.Size = new Size(157, 19);
-            feelRadio2.TabIndex = 0;
-            feelRadio2.TabStop = true;
-            feelRadio2.Text = "톡톡 걸리는 적당한 손맛";
-            feelRadio2.UseVisualStyleBackColor = true;
+            rdoTypeTactile.AutoSize = true;
+            rdoTypeTactile.Location = new Point(6, 73);
+            rdoTypeTactile.Name = "rdoTypeTactile";
+            rdoTypeTactile.Size = new Size(157, 19);
+            rdoTypeTactile.TabIndex = 0;
+            rdoTypeTactile.TabStop = true;
+            rdoTypeTactile.Text = "톡톡 걸리는 적당한 손맛";
+            rdoTypeTactile.UseVisualStyleBackColor = true;
+            rdoTypeTactile.CheckedChanged += RadioButton_CheckedChanged;
             // 
-            // feelRadio1
+            // rdoTypeLinear
             // 
-            feelRadio1.AutoSize = true;
-            feelRadio1.Location = new Point(6, 48);
-            feelRadio1.Name = "feelRadio1";
-            feelRadio1.Size = new Size(185, 19);
-            feelRadio1.TabIndex = 0;
-            feelRadio1.TabStop = true;
-            feelRadio1.Text = "걸림 없이 부드럽게 쑥 들어감";
-            feelRadio1.UseVisualStyleBackColor = true;
+            rdoTypeLinear.AutoSize = true;
+            rdoTypeLinear.Location = new Point(6, 48);
+            rdoTypeLinear.Name = "rdoTypeLinear";
+            rdoTypeLinear.Size = new Size(185, 19);
+            rdoTypeLinear.TabIndex = 0;
+            rdoTypeLinear.TabStop = true;
+            rdoTypeLinear.Text = "걸림 없이 부드럽게 쑥 들어감";
+            rdoTypeLinear.UseVisualStyleBackColor = true;
+            rdoTypeLinear.CheckedChanged += RadioButton_CheckedChanged;
             // 
-            // groupBox3
+            // grpPressure
             // 
-            groupBox3.Controls.Add(pressureRadio3);
-            groupBox3.Controls.Add(label4);
-            groupBox3.Controls.Add(pressureRadio2);
-            groupBox3.Controls.Add(pressureRadio1);
-            groupBox3.Location = new Point(24, 332);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(726, 129);
-            groupBox3.TabIndex = 1;
-            groupBox3.TabStop = false;
+            grpPressure.Controls.Add(rdoPressureHigh);
+            grpPressure.Controls.Add(label4);
+            grpPressure.Controls.Add(rdoPressureMid);
+            grpPressure.Controls.Add(rdoPressureLow);
+            grpPressure.Location = new Point(24, 332);
+            grpPressure.Name = "grpPressure";
+            grpPressure.Size = new Size(726, 129);
+            grpPressure.TabIndex = 1;
+            grpPressure.TabStop = false;
             // 
-            // btnFindSwit
+            // rdoPressureHigh
             // 
-            btnFindSwit.Location = new Point(628, 480);
-            btnFindSwit.Name = "btnFindSwit";
-            btnFindSwit.Size = new Size(122, 38);
-            btnFindSwit.TabIndex = 1;
-            btnFindSwit.Text = "스위치 찾기";
-            btnFindSwit.UseVisualStyleBackColor = true;
-            btnFindSwit.Click += btnFindSwit_Click;
-            // 
-            // pressureRadio3
-            // 
-            pressureRadio3.AutoSize = true;
-            pressureRadio3.Location = new Point(6, 98);
-            pressureRadio3.Name = "pressureRadio3";
-            pressureRadio3.Size = new Size(182, 19);
-            pressureRadio3.TabIndex = 0;
-            pressureRadio3.TabStop = true;
-            pressureRadio3.Text = "묵직하고 쫀득한 키압 (45g~)";
-            pressureRadio3.UseVisualStyleBackColor = true;
+            rdoPressureHigh.AutoSize = true;
+            rdoPressureHigh.Location = new Point(6, 98);
+            rdoPressureHigh.Name = "rdoPressureHigh";
+            rdoPressureHigh.Size = new Size(182, 19);
+            rdoPressureHigh.TabIndex = 0;
+            rdoPressureHigh.TabStop = true;
+            rdoPressureHigh.Text = "묵직하고 쫀득한 키압 (45g~)";
+            rdoPressureHigh.UseVisualStyleBackColor = true;
+            rdoPressureHigh.CheckedChanged += RadioButton_CheckedChanged;
             // 
             // label4
             // 
@@ -208,68 +204,80 @@
             label4.TabIndex = 0;
             label4.Text = "Q3. 선호하는 키압 (무게감)";
             // 
-            // pressureRadio2
+            // rdoPressureMid
             // 
-            pressureRadio2.AutoSize = true;
-            pressureRadio2.Location = new Point(6, 73);
-            pressureRadio2.Name = "pressureRadio2";
-            pressureRadio2.Size = new Size(139, 19);
-            pressureRadio2.TabIndex = 0;
-            pressureRadio2.TabStop = true;
-            pressureRadio2.Text = "표준 키압 (40g~44g)";
-            pressureRadio2.UseVisualStyleBackColor = true;
+            rdoPressureMid.AutoSize = true;
+            rdoPressureMid.Location = new Point(6, 73);
+            rdoPressureMid.Name = "rdoPressureMid";
+            rdoPressureMid.Size = new Size(139, 19);
+            rdoPressureMid.TabIndex = 0;
+            rdoPressureMid.TabStop = true;
+            rdoPressureMid.Text = "표준 키압 (40g~44g)";
+            rdoPressureMid.UseVisualStyleBackColor = true;
+            rdoPressureMid.CheckedChanged += RadioButton_CheckedChanged;
             // 
-            // pressureRadio1
+            // rdoPressureLow
             // 
-            pressureRadio1.AutoSize = true;
-            pressureRadio1.Location = new Point(6, 48);
-            pressureRadio1.Name = "pressureRadio1";
-            pressureRadio1.Size = new Size(130, 19);
-            pressureRadio1.TabIndex = 0;
-            pressureRadio1.TabStop = true;
-            pressureRadio1.Text = "가벼운 키압 (~39g)";
-            pressureRadio1.UseVisualStyleBackColor = true;
+            rdoPressureLow.AutoSize = true;
+            rdoPressureLow.Location = new Point(6, 48);
+            rdoPressureLow.Name = "rdoPressureLow";
+            rdoPressureLow.Size = new Size(130, 19);
+            rdoPressureLow.TabIndex = 0;
+            rdoPressureLow.TabStop = true;
+            rdoPressureLow.Text = "가벼운 키압 (~39g)";
+            rdoPressureLow.UseVisualStyleBackColor = true;
+            rdoPressureLow.CheckedChanged += RadioButton_CheckedChanged;
+            // 
+            // btnSubmitSurvey
+            // 
+            btnSubmitSurvey.Location = new Point(628, 480);
+            btnSubmitSurvey.Name = "btnSubmitSurvey";
+            btnSubmitSurvey.Size = new Size(122, 38);
+            btnSubmitSurvey.TabIndex = 1;
+            btnSubmitSurvey.Text = "스위치 찾기";
+            btnSubmitSurvey.UseVisualStyleBackColor = true;
+            btnSubmitSurvey.Click += btnFindSwit_Click;
             // 
             // UcSurveyPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(784, 561);
-            Controls.Add(btnFindSwit);
-            Controls.Add(groupBox1);
+            Controls.Add(btnSubmitSurvey);
+            Controls.Add(grpNoise);
             Controls.Add(label1);
-            Controls.Add(groupBox2);
-            Controls.Add(groupBox3);
-            Controls.Add(progressBar1);
+            Controls.Add(grpType);
+            Controls.Add(grpPressure);
+            Controls.Add(pgbSurveyProgress);
             Name = "UcSurveyPage";
             Text = "UcSurveyPage";
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
+            grpNoise.ResumeLayout(false);
+            grpNoise.PerformLayout();
+            grpType.ResumeLayout(false);
+            grpType.PerformLayout();
+            grpPressure.ResumeLayout(false);
+            grpPressure.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private ProgressBar progressBar1;
+        private ProgressBar pgbSurveyProgress;
         private Label label1;
-        private GroupBox groupBox1;
-        private RadioButton noiseRadio3;
+        private GroupBox grpNoise;
+        private RadioButton rdoNoiseNormal;
         private Label label2;
-        private RadioButton noiseRadio2;
-        private RadioButton noiseRadio1;
-        private GroupBox groupBox2;
+        private RadioButton rdoNoiseSemiSilent;
+        private RadioButton rdoNoiseSilent;
+        private GroupBox grpType;
         private Label label3;
-        private RadioButton feelRadio2;
-        private RadioButton feelRadio1;
-        private GroupBox groupBox3;
-        private Button btnFindSwit;
-        private RadioButton pressureRadio3;
+        private RadioButton rdoTypeTactile;
+        private RadioButton rdoTypeLinear;
+        private GroupBox grpPressure;
+        private Button btnSubmitSurvey;
+        private RadioButton rdoPressureHigh;
         private Label label4;
-        private RadioButton pressureRadio2;
-        private RadioButton pressureRadio1;
+        private RadioButton rdoPressureMid;
+        private RadioButton rdoPressureLow;
     }
 }
