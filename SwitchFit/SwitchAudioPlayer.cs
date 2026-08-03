@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Media;
+using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SwitchFit
 {
@@ -13,48 +11,66 @@ namespace SwitchFit
         [DllImport("winmm.dll")]
         private static extern long mciSendString(string command, StringBuilder returnString, int returnLength, IntPtr hwndCallback);
 
-        private static string _currentFilePath = "";
+        [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        private static extern uint GetShortPathName(string lpszLongPath, StringBuilder lpszShortPath, uint cchBuffer);
 
-        // 선택한 스위치의 소리 파일(.mp3 또는 .wav)을 준비하는 함수
+        private const int CHANNEL_COUNT = 5; // 연타용 5개 채널
+        private static int _currentChannel = 0;
+        private static string _loadedFile = "";
+
+        // 선택한 스위치 소리 파일 미리 열어두기 (프리로드)
         public static void LoadSound(string fileName)
         {
-            //try
-            //{
-            //    if (string.IsNullOrEmpty(fileName)) return;
+            try
+            {
+                if (string.IsNullOrEmpty(fileName)) return;
 
-            //    // 기존 열려있던 오디오 파일 닫기
-            //    mciSendString("close switchSound", null, 0, IntPtr.Zero);
+                // 이미 로드된 파일이면 재로드 방지
+                if (_loadedFile == fileName) return;
 
-            //    string soundPath = Path.Combine(Application.StartupPath, "Sounds", fileName);
+                string soundPath = Path.Combine(Application.StartupPath, "sounds", fileName);
 
-            //    if (File.Exists(soundPath))
-            //    {
-            //        _currentFilePath = soundPath;
-            //        // mp3/wav 파일을 별칭(switchSound)으로 열기
-            //        mciSendString($"open \"{soundPath}\" type mpegvideo alias switchSound", null, 0, IntPtr.Zero);
-            //    }
-            //    else
-            //    {
-            //        _currentFilePath = "";
-            //    }
-            //}
-            //catch
-            //{
-            //    _currentFilePath = "";
-            //}
+                if (!File.Exists(soundPath)) return;
+
+                // 한글/공백 경로 변환
+                StringBuilder sb = new StringBuilder(255);
+                GetShortPathName(soundPath, sb, (uint)sb.Capacity);
+                string shortPath = sb.ToString();
+
+                // 기존 채널들 정리 후 새로 5개 채널 오픈
+                for (int i = 0; i < CHANNEL_COUNT; i++)
+                {
+                    string alias = $"sw_snd_{i}";
+                    mciSendString($"close {alias}", null, 0, IntPtr.Zero);
+                    mciSendString($"open \"{shortPath}\" type mpegvideo alias {alias}", null, 0, IntPtr.Zero);
+                }
+
+                _loadedFile = fileName;
+            }
+            catch
+            {
+                // 예외 처리
+            }
         }
 
-        // 키보드를 눌렀을 때 소리를 재생하는 함수
+        // ⌨️ 타자 칠 때 소리 재생 (5개 채널 번갈아 가며 즉시 재생)
         public static void PlayCurrentSound()
         {
-            // 💡 [임시 테스트] 윈도우 기본 알림음(삐-) 소리를 냅니다!
-            SystemSounds.Beep.Play();
+            if (string.IsNullOrEmpty(_loadedFile)) return;
 
-            if (!string.IsNullOrEmpty(_currentFilePath))
+            try
             {
-                // 재생 위치를 처음(0)으로 돌리고 즉시 재생
-                //mciSendString("seek switchSound to start", null, 0, IntPtr.Zero);
-                //mciSendString("play switchSound", null, 0, IntPtr.Zero);
+                // 채널 순환 (0 -> 1 -> 2 -> 3 -> 4 -> 0 ...)
+                string alias = $"sw_snd_{_currentChannel}";
+                _currentChannel = (_currentChannel + 1) % CHANNEL_COUNT;
+
+                // 재생 위치를 맨 앞으로 돌리고 즉시 재생
+                mciSendString($"seek {alias} to start", null, 0, IntPtr.Zero);
+                mciSendString($"play {alias}", null, 0, IntPtr.Zero);
+            }
+            catch
+            {
+                // 예외 처리
             }
         }
     }

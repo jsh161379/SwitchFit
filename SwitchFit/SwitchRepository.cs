@@ -15,14 +15,14 @@ namespace SwitchFit
             return new List<SwitchModel>
             {
                 // [저소음 - 리니어]
-                new SwitchModel { Id = 1, Name = "오무 저소음 피치", Category = "Silent", Type = "Linear", Pressure = 35, SoundFilePath = "silent_peach.wav" },
-                new SwitchModel { Id = 2, Name = "Haimu 저소음 하트", Category = "Silent", Type = "Linear", Pressure = 40, SoundFilePath = "silent_heart.wav" },
-                new SwitchModel { Id = 3, Name = "Gateron 저소음 갈축", Category = "Silent", Type = "Linear", Pressure = 45, SoundFilePath = "silent_brown.wav" },
+                new SwitchModel { Id = 1, Name = "KTT 저소음 블루", Category = "Silent", Type = "Linear", Pressure = 39, SoundFilePath = "111_silent_blue.mp3" },
+                new SwitchModel { Id = 2, Name = "KTT 저소음 바다", Category = "Silent", Type = "Linear", Pressure = 43, SoundFilePath = "112_silent_ocean.mp3" },
+                new SwitchModel { Id = 3, Name = "체리 MX 저소음 흑축", Category = "Silent", Type = "Linear", Pressure = 62, SoundFilePath = "113_cherry_mx_silent.mp3" },
 
                 // [저소음 - 택타일]
-                new SwitchModel { Id = 4, Name = "오무 저소음 라임", Category = "Silent", Type = "Tactile", Pressure = 35, SoundFilePath = "silent_lime.wav" },
+                new SwitchModel { Id = 4, Name = "LEOBOG 저소음 눈송이", Category = "Silent", Type = "Tactile", Pressure = 36, SoundFilePath = "121_silent_snow.mp3" },
                 new SwitchModel { Id = 5, Name = "TTC 저소음 자스민", Category = "Silent", Type = "Tactile", Pressure = 42, SoundFilePath = "silent_jasmine.wav" },
-                new SwitchModel { Id = 6, Name = "Boba U4 저소음", Category = "Silent", Type = "Tactile", Pressure = 46, SoundFilePath = "boba_u4.wav" },
+                new SwitchModel { Id = 6, Name = "키크론 헤비 저소음 바나나", Category = "Silent", Type = "Tactile", Pressure = 65, SoundFilePath = "boba_u4.wav" },
 
                 // [반저소음 - 리니어]
                 new SwitchModel { Id = 7, Name = "Haimu 어쩌구 1", Category = "SemiSilent", Type = "Linear", Pressure = 35, SoundFilePath = "semi_35g.wav" },
@@ -37,7 +37,7 @@ namespace SwitchFit
                 // [일반 - 리니어]
                 new SwitchModel { Id = 13, Name = "KTT Kang White", Category = "Normal", Type = "Linear", Pressure = 38, SoundFilePath = "ktt_white.wav" },
                 new SwitchModel { Id = 14, Name = "Gateron Yellow Pro", Category = "Normal", Type = "Linear", Pressure = 42, SoundFilePath = "gat_yellow.wav" },
-                new SwitchModel { Id = 15, Name = "Cherry MX Black", Category = "Normal", Type = "Linear", Pressure = 47, SoundFilePath = "cherry_black.wav" },
+                new SwitchModel { Id = 15, Name = "체리 MX2A 흑축", Category = "Normal", Type = "Linear", Pressure = 60, SoundFilePath = "313_cherry_mx2a.mp3" },
 
                 // [일반 - 택타일]
                 new SwitchModel { Id = 16, Name = "Akko Lavender Purple", Category = "Normal", Type = "Tactile", Pressure = 36, SoundFilePath = "akko_purple.wav" },

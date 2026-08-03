@@ -20,7 +20,7 @@ namespace SwitchFit
         {
             InitializeComponent();
             // 💡 폼이 로드될 때 실행되던 핵심 초기화 함수들을 생성자에서 직접 한번 더 호출해줍니다!
-            pgbPressureGraph.Maximum = 60;
+            pgbPressureGraph.Maximum = 65;
             pgbNoiseGraph.Maximum = 3;
             cboFilterNoise.SelectedIndex = 0;
             cboFilterType.SelectedIndex = 0;
@@ -33,7 +33,7 @@ namespace SwitchFit
             InitializeComponent();
 
             // 💡 폼이 로드될 때 실행되던 핵심 초기화 함수들을 생성자에서 직접 한번 더 호출해줍니다!
-            pgbPressureGraph.Maximum = 60;
+            pgbPressureGraph.Maximum = 65;
             pgbNoiseGraph.Maximum = 3;
 
             cboFilterNoise.SelectedIndex = 0;
