@@ -38,7 +38,7 @@ namespace SwitchFit
         {
             if (rdoPressureLow.Checked) return 0;
             if (rdoPressureMid.Checked) return 1;
-            if (rdoPressureMid.Checked) return 2;
+            if (rdoPressureHigh.Checked) return 2;
             return -1; // 미선택 시
         }
         private void UpdateProgressBar()
@@ -81,17 +81,24 @@ namespace SwitchFit
                 return;
             }
 
-            // 2. 조건에 맞는 추천 스위치 및 스펙 결정 (예시 데이터)
-            string recommendedSwitch = "체리 MX Board 3.0S (저소음 적축)";
-            string recommendedSpec = "저소음 / 리니어 / 45g";
+            // 2. 조건에 맞는 추천 스위치 및 스펙 결정
+            string[] noiseArr = { "Silent", "SemiSilent", "Normal" };
+            string[] typeArr = { "Linear", "Tactile" };
+            string[] pressureArr = { "Low", "Mid", "High" };
 
-            // 3. 결과 폼 생성 및 팝업 띄우기 (ShowDialog)
+            SwitchModel resultSwitch = SwitchRepository.GetRecommendation(noiseArr[noiseIdx], typeArr[typeIdx], pressureArr[pressureIdx]);
+
+            string recommendedSwitch = resultSwitch.Name;
+            string recommendedSpec = $"{resultSwitch.CategoryKr} / {resultSwitch.TypeKr} / {resultSwitch.Pressure}g";
+
             using (FormSurveyResult resultForm = new FormSurveyResult(recommendedSwitch, recommendedSpec))
             {
                 if (resultForm.ShowDialog() == DialogResult.OK)
                 {
-                    // '타건하러 가기' 버튼을 눌렀을 때 실행할 로직
-                    // 예: Main Form의 타건 탭으로 이동 등
+                    // '타건하러 가기' 클릭 시 설문창 닫고 타건존(UcSwitchListPage) 열기
+                    this.Hide();
+                    UcSwitchListPage listPage = new UcSwitchListPage();
+                    listPage.Show();
                 }
             }
         }

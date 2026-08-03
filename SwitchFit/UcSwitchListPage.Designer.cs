@@ -109,6 +109,7 @@
             // cboFilterPressure
             // 
             cboFilterPressure.FormattingEnabled = true;
+            cboFilterPressure.Items.AddRange(new object[] { "전체", "가벼움 (~39g)", "표준 (40g~44g)", "묵직함 (45g~)" });
             cboFilterPressure.Location = new Point(83, 76);
             cboFilterPressure.Name = "cboFilterPressure";
             cboFilterPressure.Size = new Size(121, 23);
@@ -126,6 +127,7 @@
             // cboFilterType
             // 
             cboFilterType.FormattingEnabled = true;
+            cboFilterType.Items.AddRange(new object[] { "전체", "리니어", "택타일" });
             cboFilterType.Location = new Point(83, 43);
             cboFilterType.Name = "cboFilterType";
             cboFilterType.Size = new Size(121, 23);
@@ -143,6 +145,7 @@
             // cboFilterNoise
             // 
             cboFilterNoise.FormattingEnabled = true;
+            cboFilterNoise.Items.AddRange(new object[] { "전체", "저소음", "반저소음", "일반" });
             cboFilterNoise.Location = new Point(83, 14);
             cboFilterNoise.Name = "cboFilterNoise";
             cboFilterNoise.Size = new Size(121, 23);
@@ -171,6 +174,7 @@
             txtTypingZone.Name = "txtTypingZone";
             txtTypingZone.Size = new Size(323, 295);
             txtTypingZone.TabIndex = 2;
+            txtTypingZone.KeyDown += txtTypingZone_KeyDown;
             // 
             // pgbNoiseGraph
             // 

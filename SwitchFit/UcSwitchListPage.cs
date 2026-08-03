@@ -18,23 +18,21 @@ namespace SwitchFit
         public UcSwitchListPage()
         {
             InitializeComponent();
-        }
 
-        private void UcSwitchListPage_Load(object sender, EventArgs e)
-        {
-            InitComboBoxes();
-            LoadSwitchData();
-        }
-
-        private void InitComboBoxes()
-        {
-            cboFilterNoise.Items.AddRange(new string[] { "전체", "저소음", "반저소음", "일반" });
-            cboFilterType.Items.AddRange(new string[] { "전체", "리니어", "택타일" });
-            cboFilterPressure.Items.AddRange(new string[] { "전체", "가벼움 (~39g)", "표준 (40g~44g)", "묵직함 (45g~)" });
+            // 💡 폼이 로드될 때 실행되던 핵심 초기화 함수들을 생성자에서 직접 한번 더 호출해줍니다!
+            pgbPressureGraph.Maximum = 60;
+            pgbNoiseGraph.Maximum = 3;
 
             cboFilterNoise.SelectedIndex = 0;
             cboFilterType.SelectedIndex = 0;
             cboFilterPressure.SelectedIndex = 0;
+
+            LoadSwitchData();
+        }
+
+        private void UcSwitchListPage_Load(object sender, EventArgs e)
+        {
+            LoadSwitchData();
         }
 
         private void LoadSwitchData()
@@ -75,10 +73,10 @@ namespace SwitchFit
             foreach (SwitchModel sw in _allSwitches)
             {
                 // 소음 조건 확인
-                bool noiseOk = (selectedNoise == "전체") || (sw.CategoryKr == selectedNoise);
+                bool noiseOk = (selectedNoise == "전체") || (selectedNoise　==　sw.CategoryKr);
 
                 // 키감 조건 확인
-                bool typeOk = (selectedType == "전체") || (sw.TypeKr == selectedType);
+                bool typeOk = (selectedType == "전체") || (selectedType == sw.TypeKr);
 
                 // 키압 조건 확인 (0:전체, 1:가벼움, 2:표준, 3:묵직함)
                 bool pressureOk = true;
@@ -108,8 +106,7 @@ namespace SwitchFit
             lblNoiseValue.Text = _selectedSwitch.CategoryKr;
 
             // 키압 프로그래스바 수치 적용 (최대 60g 기준)
-            int pressureVal = Math.Min(60, Math.Max(0, _selectedSwitch.Pressure));
-            pgbPressureGraph.Value = pressureVal;
+            pgbPressureGraph.Value = _selectedSwitch.Pressure;
 
             // 소음 프로그래스바 수치 적용 (1:저소음, 2:반저소음, 3:일반)
             int noiseVal = 3;
@@ -118,7 +115,7 @@ namespace SwitchFit
 
             pgbNoiseGraph.Value = noiseVal;
 
-            // 🔊 타건 사운드 메모리에 준비(Pre-load)
+            // 타건 사운드 메모리에 준비(Pre-load)
             SwitchAudioPlayer.LoadSound(_selectedSwitch.SoundFilePath);
         }
 
