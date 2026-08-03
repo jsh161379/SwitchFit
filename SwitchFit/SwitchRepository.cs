@@ -22,26 +22,26 @@ namespace SwitchFit
                 // [저소음 - 택타일]
                 new SwitchModel { Id = 4, Name = "오무 저소음 라임", Category = "Silent", Type = "Tactile", Pressure = 35, SoundFilePath = "silent_lime.wav" },
                 new SwitchModel { Id = 5, Name = "TTC 저소음 자스민", Category = "Silent", Type = "Tactile", Pressure = 42, SoundFilePath = "silent_jasmine.wav" },
-                new SwitchModel { Id = 6, Name = "Boba U4 저소음", Category = "Silent", Type = "Tactile", Pressure = 62, SoundFilePath = "boba_u4.wav" },
+                new SwitchModel { Id = 6, Name = "Boba U4 저소음", Category = "Silent", Type = "Tactile", Pressure = 46, SoundFilePath = "boba_u4.wav" },
 
                 // [반저소음 - 리니어]
-                new SwitchModel { Id = 7, Name = "Haimu 세미사일런트 35g", Category = "SemiSilent", Type = "Linear", Pressure = 35, SoundFilePath = "semi_35g.wav" },
-                new SwitchModel { Id = 8, Name = "Haimu 세미사일런트 42g", Category = "SemiSilent", Type = "Linear", Pressure = 42, SoundFilePath = "semi_42g.wav" },
-                new SwitchModel { Id = 9, Name = "Haimu 세미사일런트 50g", Category = "SemiSilent", Type = "Linear", Pressure = 50, SoundFilePath = "semi_50g.wav" },
+                new SwitchModel { Id = 7, Name = "Haimu 어쩌구 1", Category = "SemiSilent", Type = "Linear", Pressure = 35, SoundFilePath = "semi_35g.wav" },
+                new SwitchModel { Id = 8, Name = "Haimu 어쩌구 2", Category = "SemiSilent", Type = "Linear", Pressure = 42, SoundFilePath = "semi_42g.wav" },
+                new SwitchModel { Id = 9, Name = "Haimu 어쩌구 3", Category = "SemiSilent", Type = "Linear", Pressure = 50, SoundFilePath = "semi_50g.wav" },
 
                 // [반저소음 - 택타일]
-                new SwitchModel { Id = 10, Name = "SPM 새벽 택타일 38g", Category = "SemiSilent", Type = "Tactile", Pressure = 38, SoundFilePath = "spm_dawn_38.wav" },
-                new SwitchModel { Id = 11, Name = "SPM 새벽 택타일 40g", Category = "SemiSilent", Type = "Tactile", Pressure = 40, SoundFilePath = "spm_dawn_40.wav" },
-                new SwitchModel { Id = 12, Name = "SPM 새벽 택타일 48g", Category = "SemiSilent", Type = "Tactile", Pressure = 48, SoundFilePath = "spm_dawn_48.wav" },
+                new SwitchModel { Id = 10, Name = "SPM 새벽축", Category = "SemiSilent", Type = "Tactile", Pressure = 38, SoundFilePath = "spm_dawn_38.wav" },
+                new SwitchModel { Id = 11, Name = "SPM 새벽축", Category = "SemiSilent", Type = "Tactile", Pressure = 40, SoundFilePath = "spm_dawn_40.wav" },
+                new SwitchModel { Id = 12, Name = "SPM 새벽축", Category = "SemiSilent", Type = "Tactile", Pressure = 48, SoundFilePath = "spm_dawn_48.wav" },
 
                 // [일반 - 리니어]
                 new SwitchModel { Id = 13, Name = "KTT Kang White", Category = "Normal", Type = "Linear", Pressure = 38, SoundFilePath = "ktt_white.wav" },
-                new SwitchModel { Id = 14, Name = "Gateron Yellow Pro", Category = "Normal", Type = "Linear", Pressure = 50, SoundFilePath = "gat_yellow.wav" },
-                new SwitchModel { Id = 15, Name = "Cherry MX Black", Category = "Normal", Type = "Linear", Pressure = 60, SoundFilePath = "cherry_black.wav" },
+                new SwitchModel { Id = 14, Name = "Gateron Yellow Pro", Category = "Normal", Type = "Linear", Pressure = 42, SoundFilePath = "gat_yellow.wav" },
+                new SwitchModel { Id = 15, Name = "Cherry MX Black", Category = "Normal", Type = "Linear", Pressure = 47, SoundFilePath = "cherry_black.wav" },
 
                 // [일반 - 택타일]
                 new SwitchModel { Id = 16, Name = "Akko Lavender Purple", Category = "Normal", Type = "Tactile", Pressure = 36, SoundFilePath = "akko_purple.wav" },
-                new SwitchModel { Id = 17, Name = "Holy Panda", Category = "Normal", Type = "Tactile", Pressure = 45, SoundFilePath = "holy_panda.wav" },
+                new SwitchModel { Id = 17, Name = "Holy Panda", Category = "Normal", Type = "Tactile", Pressure = 42, SoundFilePath = "holy_panda.wav" },
                 new SwitchModel { Id = 18, Name = "Gateron Baby Kangaroo", Category = "Normal", Type = "Tactile", Pressure = 59, SoundFilePath = "baby_kangaroo.wav" }
             };
         }

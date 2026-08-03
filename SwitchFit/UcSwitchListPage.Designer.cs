@@ -39,14 +39,18 @@
             label2 = new Label();
             cboFilterNoise = new ComboBox();
             panel2 = new Panel();
+            btnSearchCoupang = new Button();
+            btnSearchNaver = new Button();
             txtTypingZone = new TextBox();
             pgbNoiseGraph = new ProgressBar();
             pgbPressureGraph = new ProgressBar();
+            lblRecommendSwitchName = new Label();
             lblCurrentSwitchName = new Label();
             lblNoiseValue = new Label();
             label8 = new Label();
             lblPressureValue = new Label();
             label7 = new Label();
+            label6 = new Label();
             label5 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -153,47 +157,80 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(btnSearchCoupang);
+            panel2.Controls.Add(btnSearchNaver);
             panel2.Controls.Add(txtTypingZone);
             panel2.Controls.Add(pgbNoiseGraph);
             panel2.Controls.Add(pgbPressureGraph);
+            panel2.Controls.Add(lblRecommendSwitchName);
             panel2.Controls.Add(lblCurrentSwitchName);
             panel2.Controls.Add(lblNoiseValue);
             panel2.Controls.Add(label8);
             panel2.Controls.Add(lblPressureValue);
             panel2.Controls.Add(label7);
+            panel2.Controls.Add(label6);
             panel2.Controls.Add(label5);
             panel2.Location = new Point(394, 81);
             panel2.Name = "panel2";
             panel2.Size = new Size(364, 454);
             panel2.TabIndex = 2;
             // 
+            // btnSearchCoupang
+            // 
+            btnSearchCoupang.Location = new Point(86, 405);
+            btnSearchCoupang.Name = "btnSearchCoupang";
+            btnSearchCoupang.Size = new Size(131, 37);
+            btnSearchCoupang.TabIndex = 3;
+            btnSearchCoupang.Text = "쿠팡 최저가 검색";
+            btnSearchCoupang.UseVisualStyleBackColor = true;
+            btnSearchCoupang.Click += btnSearchCoupang_Click;
+            // 
+            // btnSearchNaver
+            // 
+            btnSearchNaver.Location = new Point(223, 405);
+            btnSearchNaver.Name = "btnSearchNaver";
+            btnSearchNaver.Size = new Size(131, 37);
+            btnSearchNaver.TabIndex = 3;
+            btnSearchNaver.Text = "네이버 검색";
+            btnSearchNaver.UseVisualStyleBackColor = true;
+            btnSearchNaver.Click += btnSearchNaver_Click;
+            // 
             // txtTypingZone
             // 
-            txtTypingZone.Location = new Point(24, 46);
+            txtTypingZone.Location = new Point(24, 62);
             txtTypingZone.Multiline = true;
             txtTypingZone.Name = "txtTypingZone";
-            txtTypingZone.Size = new Size(323, 295);
+            txtTypingZone.Size = new Size(323, 262);
             txtTypingZone.TabIndex = 2;
             txtTypingZone.KeyDown += txtTypingZone_KeyDown;
             // 
             // pgbNoiseGraph
             // 
-            pgbNoiseGraph.Location = new Point(69, 397);
+            pgbNoiseGraph.Location = new Point(69, 370);
             pgbNoiseGraph.Name = "pgbNoiseGraph";
             pgbNoiseGraph.Size = new Size(134, 23);
             pgbNoiseGraph.TabIndex = 1;
             // 
             // pgbPressureGraph
             // 
-            pgbPressureGraph.Location = new Point(69, 366);
+            pgbPressureGraph.Location = new Point(69, 339);
             pgbPressureGraph.Name = "pgbPressureGraph";
             pgbPressureGraph.Size = new Size(134, 23);
             pgbPressureGraph.TabIndex = 1;
             // 
+            // lblRecommendSwitchName
+            // 
+            lblRecommendSwitchName.AutoSize = true;
+            lblRecommendSwitchName.Location = new Point(120, 15);
+            lblRecommendSwitchName.Name = "lblRecommendSwitchName";
+            lblRecommendSwitchName.Size = new Size(83, 15);
+            lblRecommendSwitchName.TabIndex = 0;
+            lblRecommendSwitchName.Text = "선택된 스위치";
+            // 
             // lblCurrentSwitchName
             // 
             lblCurrentSwitchName.AutoSize = true;
-            lblCurrentSwitchName.Location = new Point(120, 17);
+            lblCurrentSwitchName.Location = new Point(120, 37);
             lblCurrentSwitchName.Name = "lblCurrentSwitchName";
             lblCurrentSwitchName.Size = new Size(83, 15);
             lblCurrentSwitchName.TabIndex = 0;
@@ -202,7 +239,7 @@
             // lblNoiseValue
             // 
             lblNoiseValue.AutoSize = true;
-            lblNoiseValue.Location = new Point(209, 400);
+            lblNoiseValue.Location = new Point(209, 373);
             lblNoiseValue.Name = "lblNoiseValue";
             lblNoiseValue.Size = new Size(59, 15);
             lblNoiseValue.TabIndex = 0;
@@ -211,7 +248,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(24, 400);
+            label8.Location = new Point(24, 373);
             label8.Name = "label8";
             label8.Size = new Size(38, 15);
             label8.TabIndex = 0;
@@ -220,7 +257,7 @@
             // lblPressureValue
             // 
             lblPressureValue.AutoSize = true;
-            lblPressureValue.Location = new Point(209, 369);
+            lblPressureValue.Location = new Point(209, 342);
             lblPressureValue.Name = "lblPressureValue";
             lblPressureValue.Size = new Size(28, 15);
             lblPressureValue.TabIndex = 0;
@@ -229,16 +266,25 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(24, 369);
+            label7.Location = new Point(24, 342);
             label7.Name = "label7";
             label7.Size = new Size(38, 15);
             label7.TabIndex = 0;
             label7.Text = "키압: ";
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(24, 15);
+            label6.Name = "label6";
+            label6.Size = new Size(78, 15);
+            label6.TabIndex = 0;
+            label6.Text = "추천 스위치: ";
+            // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(24, 17);
+            label5.Location = new Point(24, 37);
             label5.Name = "label5";
             label5.Size = new Size(78, 15);
             label5.TabIndex = 0;
@@ -284,5 +330,9 @@
         private Label lblNoiseValue;
         private Label label8;
         private Label lblPressureValue;
+        private Button btnSearchNaver;
+        private Button btnSearchCoupang;
+        private Label lblRecommendSwitchName;
+        private Label label6;
     }
 }

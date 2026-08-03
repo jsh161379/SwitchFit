@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,18 @@ namespace SwitchFit
         public UcSwitchListPage()
         {
             InitializeComponent();
+            // 💡 폼이 로드될 때 실행되던 핵심 초기화 함수들을 생성자에서 직접 한번 더 호출해줍니다!
+            pgbPressureGraph.Maximum = 60;
+            pgbNoiseGraph.Maximum = 3;
+            cboFilterNoise.SelectedIndex = 0;
+            cboFilterType.SelectedIndex = 0;
+            cboFilterPressure.SelectedIndex = 0;
+            LoadSwitchData();
+        }
+
+        public UcSwitchListPage(string switchName)
+        {
+            InitializeComponent();
 
             // 💡 폼이 로드될 때 실행되던 핵심 초기화 함수들을 생성자에서 직접 한번 더 호출해줍니다!
             pgbPressureGraph.Maximum = 60;
@@ -28,6 +41,7 @@ namespace SwitchFit
             cboFilterPressure.SelectedIndex = 0;
 
             LoadSwitchData();
+            lblRecommendSwitchName.Text = switchName;
         }
 
         private void UcSwitchListPage_Load(object sender, EventArgs e)
@@ -73,7 +87,7 @@ namespace SwitchFit
             foreach (SwitchModel sw in _allSwitches)
             {
                 // 소음 조건 확인
-                bool noiseOk = (selectedNoise == "전체") || (selectedNoise　==　sw.CategoryKr);
+                bool noiseOk = (selectedNoise == "전체") || (selectedNoise == sw.CategoryKr);
 
                 // 키감 조건 확인
                 bool typeOk = (selectedType == "전체") || (selectedType == sw.TypeKr);
@@ -123,6 +137,47 @@ namespace SwitchFit
         private void txtTypingZone_KeyDown(object sender, KeyEventArgs e)
         {
             SwitchAudioPlayer.PlayCurrentSound();
+        }
+
+        private void btnSearchNaver_Click(object sender, EventArgs e)
+        {
+            if (_selectedSwitch == null) return;
+
+            // "체리 저소음 적축 스위치" 형태로 뒤에 '스위치' 키워드를 붙여주면 쇼핑 결과가 상단에 잘 뜹니다!
+            string keyword = $"{_selectedSwitch.Name} 스위치";
+            string encodedKeyword = Uri.EscapeDataString(keyword);
+
+            // 💡 쇼핑 전용 주소 대신 '네이버 통합검색' 주소로 변경
+            string url = $"https://search.naver.com/search.naver?query={encodedKeyword}";
+
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = url,
+                UseShellExecute = true
+            });
+        }
+
+        private void btnSearchCoupang_Click(object sender, EventArgs e)
+        {
+            if (_selectedSwitch == null)
+            {
+                MessageBox.Show("검색할 스위치를 먼저 선택해 주세요!", "알림", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // 1. 검색어 뒤에 '스위치'를 붙여서 정확한 키보드 부품 결과가 나오도록 유도
+            string keyword = $"{_selectedSwitch.Name} 스위치";
+            string encodedKeyword = Uri.EscapeDataString(keyword);
+
+            // 2. 쿠팡 검색 URL 생성
+            string coupangUrl = $"https://www.coupang.com/np/search?component=&q={encodedKeyword}";
+
+            // 3. 브라우저로 띄우기
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = coupangUrl,
+                UseShellExecute = true
+            });
         }
     }
 }

@@ -97,7 +97,7 @@ namespace SwitchFit
                 {
                     // '타건하러 가기' 클릭 시 설문창 닫고 타건존(UcSwitchListPage) 열기
                     this.Hide();
-                    UcSwitchListPage listPage = new UcSwitchListPage();
+                    UcSwitchListPage listPage = new UcSwitchListPage(recommendedSwitch);
                     listPage.Show();
                 }
             }
