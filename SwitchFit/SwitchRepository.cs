@@ -15,22 +15,22 @@ namespace SwitchFit
             return new List<SwitchModel>
             {
                 // [저소음 - 리니어]
-                new SwitchModel { Id = 1, Name = "KTT 저소음 블루", Category = "Silent", Type = "Linear", Pressure = 39, SoundFilePath = "111_silent_blue.mp3" },
-                new SwitchModel { Id = 2, Name = "KTT 저소음 바다", Category = "Silent", Type = "Linear", Pressure = 43, SoundFilePath = "112_silent_ocean.mp3" },
+                new SwitchModel { Id = 1, Name = "KTT 저소음 블루축", Category = "Silent", Type = "Linear", Pressure = 39, SoundFilePath = "111_silent_blue.mp3" },
+                new SwitchModel { Id = 2, Name = "KTT 저소음 바다축", Category = "Silent", Type = "Linear", Pressure = 43, SoundFilePath = "112_silent_ocean.mp3" },
                 new SwitchModel { Id = 3, Name = "체리 MX 저소음 흑축", Category = "Silent", Type = "Linear", Pressure = 62, SoundFilePath = "113_cherry_mx_silent.mp3" },
 
                 // [저소음 - 택타일]
-                new SwitchModel { Id = 4, Name = "LEOBOG 저소음 눈송이", Category = "Silent", Type = "Tactile", Pressure = 36, SoundFilePath = "121_silent_snow.mp3" },
-                new SwitchModel { Id = 5, Name = "TTC 저소음 자스민", Category = "Silent", Type = "Tactile", Pressure = 42, SoundFilePath = "silent_jasmine.wav" },
-                new SwitchModel { Id = 6, Name = "키크론 저소음 바나나", Category = "Silent", Type = "Tactile", Pressure = 55, SoundFilePath = "boba_u4.wav" },
+                new SwitchModel { Id = 4, Name = "LEOBOG 저소음 눈송이축", Category = "Silent", Type = "Tactile", Pressure = 36, SoundFilePath = "121_silent_snow.mp3" },
+                new SwitchModel { Id = 5, Name = "SPM 새벽축 택타일", Category = "Silent", Type = "Tactile", Pressure = 40, SoundFilePath = "122_silent_dawn_tactile.mp3" },
+                new SwitchModel { Id = 6, Name = "키크론 저소음 바나나축", Category = "Silent", Type = "Tactile", Pressure = 55, SoundFilePath = "123_silent_banana.mp3" },
 
                 // [반저소음 - 리니어]
-                new SwitchModel { Id = 7, Name = "Haimu 어쩌구 1", Category = "SemiSilent", Type = "Linear", Pressure = 35, SoundFilePath = "semi_35g.wav" },
-                new SwitchModel { Id = 8, Name = "Haimu 어쩌구 2", Category = "SemiSilent", Type = "Linear", Pressure = 42, SoundFilePath = "semi_42g.wav" },
-                new SwitchModel { Id = 9, Name = "Haimu 어쩌구 3", Category = "SemiSilent", Type = "Linear", Pressure = 50, SoundFilePath = "semi_50g.wav" },
+                new SwitchModel { Id = 7, Name = "HMX 목새축 라이트 리니어", Category = "SemiSilent", Type = "Linear", Pressure = 37, SoundFilePath = "211_moksae_light_linear.mp3" },
+                new SwitchModel { Id = 8, Name = "HMX 저소음 디딤돌축", Category = "SemiSilent", Type = "Linear", Pressure = 43, SoundFilePath = "212_silent_didimdol.mp3" },
+                new SwitchModel { Id = 9, Name = "HMX 저소음 선셋축", Category = "SemiSilent", Type = "Linear", Pressure = 45, SoundFilePath = "213_silent_sunset.mp3" },
 
                 // [반저소음 - 택타일]
-                new SwitchModel { Id = 10, Name = "SPM 새벽축", Category = "SemiSilent", Type = "Tactile", Pressure = 38, SoundFilePath = "spm_dawn_38.wav" },
+                new SwitchModel { Id = 10, Name = "HMX 목새 라이트 택타일", Category = "SemiSilent", Type = "Tactile", Pressure = 37, SoundFilePath = "221_moksae_light_tactile.mp3" },
                 new SwitchModel { Id = 11, Name = "SPM 새벽축", Category = "SemiSilent", Type = "Tactile", Pressure = 40, SoundFilePath = "spm_dawn_40.wav" },
                 new SwitchModel { Id = 12, Name = "SPM 새벽축", Category = "SemiSilent", Type = "Tactile", Pressure = 48, SoundFilePath = "spm_dawn_48.wav" },
 
