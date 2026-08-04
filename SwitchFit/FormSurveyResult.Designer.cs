@@ -39,11 +39,11 @@
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("한컴 말랑말랑 Bold", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(23, 40);
+            label1.Anchor = AnchorStyles.None;
+            label1.Font = new Font("맑은 고딕", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(22, 40);
             label1.Name = "label1";
-            label1.Size = new Size(334, 31);
+            label1.Size = new Size(452, 31);
             label1.TabIndex = 0;
             label1.Text = "당신에게 딱 맞는 스위치 진단 결과";
             // 
@@ -89,9 +89,9 @@
             // 
             // btnCopyResult
             // 
-            btnCopyResult.Location = new Point(117, 203);
+            btnCopyResult.Location = new Point(185, 204);
             btnCopyResult.Name = "btnCopyResult";
-            btnCopyResult.Size = new Size(111, 35);
+            btnCopyResult.Size = new Size(111, 42);
             btnCopyResult.TabIndex = 2;
             btnCopyResult.Text = "결과 복사";
             btnCopyResult.UseVisualStyleBackColor = true;
@@ -99,9 +99,9 @@
             // 
             // btnGoToTest
             // 
-            btnGoToTest.Location = new Point(262, 203);
+            btnGoToTest.Location = new Point(328, 204);
             btnGoToTest.Name = "btnGoToTest";
-            btnGoToTest.Size = new Size(111, 35);
+            btnGoToTest.Size = new Size(111, 42);
             btnGoToTest.TabIndex = 2;
             btnGoToTest.Text = "타건하러 가기";
             btnGoToTest.UseVisualStyleBackColor = true;
@@ -111,7 +111,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(420, 267);
+            ClientSize = new Size(474, 267);
             Controls.Add(btnGoToTest);
             Controls.Add(btnCopyResult);
             Controls.Add(label3);

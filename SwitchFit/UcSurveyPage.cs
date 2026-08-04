@@ -15,6 +15,7 @@ namespace SwitchFit
         public UcSurveyPage()
         {
             InitializeComponent();
+            UIHelper.ApplyModernTheme(this);
         }
         // Q1. 소음 선택 값 (0: 저소음, 1: 반저소음, 2: 일반)
         private int GetSelectedNoiseIndex()

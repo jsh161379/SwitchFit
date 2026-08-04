@@ -26,6 +26,8 @@ namespace SwitchFit
             cboFilterType.SelectedIndex = 0;
             cboFilterPressure.SelectedIndex = 0;
             LoadSwitchData();
+            UIHelper.ApplyModernTheme(this);
+            UIHelper.ApplySolidTheme(this);
         }
 
         public UcSwitchListPage(string switchName)
@@ -42,6 +44,8 @@ namespace SwitchFit
 
             LoadSwitchData();
             lblRecommendSwitchName.Text = switchName;
+            UIHelper.ApplyModernTheme(this);
+            UIHelper.ApplySolidTheme(this);
         }
 
         private void UcSwitchListPage_Load(object sender, EventArgs e)
@@ -143,8 +147,7 @@ namespace SwitchFit
         {
             if (_selectedSwitch == null) return;
 
-            // "체리 저소음 적축 스위치" 형태로 뒤에 '스위치' 키워드를 붙여주면 쇼핑 결과가 상단에 잘 뜹니다!
-            string keyword = $"{_selectedSwitch.Name} 스위치";
+            string keyword = _selectedSwitch.Name;
             string encodedKeyword = Uri.EscapeDataString(keyword);
 
             // 💡 쇼핑 전용 주소 대신 '네이버 통합검색' 주소로 변경
@@ -165,8 +168,7 @@ namespace SwitchFit
                 return;
             }
 
-            // 1. 검색어 뒤에 '스위치'를 붙여서 정확한 키보드 부품 결과가 나오도록 유도
-            string keyword = $"{_selectedSwitch.Name} 스위치";
+            string keyword = _selectedSwitch.Name;
             string encodedKeyword = Uri.EscapeDataString(keyword);
 
             // 2. 쿠팡 검색 URL 생성

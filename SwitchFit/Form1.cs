@@ -5,6 +5,8 @@ namespace SwitchFit
         public Form1()
         {
             InitializeComponent();
+            //UIHelper.ApplyGradientBackground(this);
+            UIHelper.ApplyModernTheme(this);
         }
   
         private void button1_Click(object sender, EventArgs e)

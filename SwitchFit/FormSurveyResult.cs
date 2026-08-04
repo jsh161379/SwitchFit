@@ -17,6 +17,7 @@ namespace SwitchFit
         public FormSurveyResult()
         {
             InitializeComponent();
+            UIHelper.ApplyModernTheme(this);
         }
 
         public FormSurveyResult(string switchName, string switchSpec) : this()

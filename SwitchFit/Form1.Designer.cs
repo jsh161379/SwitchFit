@@ -36,27 +36,30 @@
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("MV Boli", 48F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(205, 114);
+            label1.Anchor = AnchorStyles.None;
+            label1.Font = new Font("맑은 고딕", 48F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(-1, 113);
             label1.Name = "label1";
-            label1.Size = new Size(350, 85);
+            label1.Size = new Size(786, 85);
             label1.TabIndex = 0;
             label1.Text = "SwitchFit!";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("한컴 말랑말랑 Regular", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(288, 233);
+            label2.Anchor = AnchorStyles.None;
+            label2.Font = new Font("맑은 고딕", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(-1, 233);
             label2.Name = "label2";
-            label2.Size = new Size(192, 25);
+            label2.Size = new Size(786, 25);
             label2.TabIndex = 1;
             label2.Text = "나에게 맞는 스위치 찾기";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
-            button1.Location = new Point(316, 292);
+            button1.Anchor = AnchorStyles.None;
+            button1.Location = new Point(316, 302);
             button1.Name = "button1";
             button1.Size = new Size(146, 57);
             button1.TabIndex = 2;
@@ -66,7 +69,8 @@
             // 
             // button2
             // 
-            button2.Location = new Point(316, 383);
+            button2.Anchor = AnchorStyles.None;
+            button2.Location = new Point(316, 390);
             button2.Name = "button2";
             button2.Size = new Size(146, 57);
             button2.TabIndex = 2;
@@ -86,7 +90,6 @@
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

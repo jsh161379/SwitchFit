@@ -52,7 +52,7 @@
             // 
             // pgbSurveyProgress
             // 
-            pgbSurveyProgress.Location = new Point(24, 486);
+            pgbSurveyProgress.Location = new Point(24, 498);
             pgbSurveyProgress.Name = "pgbSurveyProgress";
             pgbSurveyProgress.Size = new Size(576, 23);
             pgbSurveyProgress.TabIndex = 0;
@@ -60,10 +60,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("한컴 말랑말랑 Bold", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("맑은 고딕", 24F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(24, 26);
             label1.Name = "label1";
-            label1.Size = new Size(323, 41);
+            label1.Size = new Size(373, 45);
             label1.TabIndex = 0;
             label1.Text = "나에게 맞는 축 진단하기";
             // 
@@ -73,9 +73,9 @@
             grpNoise.Controls.Add(label2);
             grpNoise.Controls.Add(rdoNoiseSemiSilent);
             grpNoise.Controls.Add(rdoNoiseSilent);
-            grpNoise.Location = new Point(24, 80);
+            grpNoise.Location = new Point(24, 78);
             grpNoise.Name = "grpNoise";
-            grpNoise.Size = new Size(726, 129);
+            grpNoise.Size = new Size(726, 139);
             grpNoise.TabIndex = 1;
             grpNoise.TabStop = false;
             // 
@@ -94,7 +94,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Font = new Font("맑은 고딕", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(6, 16);
             label2.Name = "label2";
             label2.Size = new Size(225, 21);
@@ -130,19 +130,19 @@
             grpType.Controls.Add(label3);
             grpType.Controls.Add(rdoTypeTactile);
             grpType.Controls.Add(rdoTypeLinear);
-            grpType.Location = new Point(24, 215);
+            grpType.Location = new Point(24, 213);
             grpType.Name = "grpType";
-            grpType.Size = new Size(726, 111);
+            grpType.Size = new Size(726, 117);
             grpType.TabIndex = 1;
             grpType.TabStop = false;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Font = new Font("맑은 고딕", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label3.Location = new Point(6, 16);
             label3.Name = "label3";
-            label3.Size = new Size(191, 21);
+            label3.Size = new Size(193, 21);
             label3.TabIndex = 0;
             label3.Text = "Q2. 선호하는 키감 (손맛)";
             // 
@@ -176,9 +176,9 @@
             grpPressure.Controls.Add(label4);
             grpPressure.Controls.Add(rdoPressureMid);
             grpPressure.Controls.Add(rdoPressureLow);
-            grpPressure.Location = new Point(24, 332);
+            grpPressure.Location = new Point(24, 330);
             grpPressure.Name = "grpPressure";
-            grpPressure.Size = new Size(726, 129);
+            grpPressure.Size = new Size(726, 142);
             grpPressure.TabIndex = 1;
             grpPressure.TabStop = false;
             // 
@@ -197,10 +197,10 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Font = new Font("맑은 고딕", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label4.Location = new Point(6, 16);
             label4.Name = "label4";
-            label4.Size = new Size(207, 21);
+            label4.Size = new Size(209, 21);
             label4.TabIndex = 0;
             label4.Text = "Q3. 선호하는 키압 (무게감)";
             // 
@@ -230,7 +230,7 @@
             // 
             // btnSubmitSurvey
             // 
-            btnSubmitSurvey.Location = new Point(628, 480);
+            btnSubmitSurvey.Location = new Point(628, 492);
             btnSubmitSurvey.Name = "btnSubmitSurvey";
             btnSubmitSurvey.Size = new Size(122, 38);
             btnSubmitSurvey.TabIndex = 1;

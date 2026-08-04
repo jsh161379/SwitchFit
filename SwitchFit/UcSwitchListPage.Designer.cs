@@ -59,10 +59,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("한컴 말랑말랑 Bold", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("맑은 고딕", 24F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(24, 26);
             label1.Name = "label1";
-            label1.Size = new Size(330, 41);
+            label1.Size = new Size(381, 45);
             label1.TabIndex = 1;
             label1.Text = "스위치 도감, 타건 체험존";
             // 
@@ -177,7 +177,7 @@
             // 
             // btnSearchCoupang
             // 
-            btnSearchCoupang.Location = new Point(86, 405);
+            btnSearchCoupang.Location = new Point(86, 409);
             btnSearchCoupang.Name = "btnSearchCoupang";
             btnSearchCoupang.Size = new Size(131, 37);
             btnSearchCoupang.TabIndex = 3;
@@ -187,7 +187,7 @@
             // 
             // btnSearchNaver
             // 
-            btnSearchNaver.Location = new Point(223, 405);
+            btnSearchNaver.Location = new Point(223, 409);
             btnSearchNaver.Name = "btnSearchNaver";
             btnSearchNaver.Size = new Size(131, 37);
             btnSearchNaver.TabIndex = 3;
