@@ -22,7 +22,7 @@ namespace SwitchFit
                 // [저소음 - 택타일]
                 new SwitchModel { Id = 4, Name = "LEOBOG 저소음 눈송이", Category = "Silent", Type = "Tactile", Pressure = 36, SoundFilePath = "121_silent_snow.mp3" },
                 new SwitchModel { Id = 5, Name = "TTC 저소음 자스민", Category = "Silent", Type = "Tactile", Pressure = 42, SoundFilePath = "silent_jasmine.wav" },
-                new SwitchModel { Id = 6, Name = "키크론 헤비 저소음 바나나", Category = "Silent", Type = "Tactile", Pressure = 65, SoundFilePath = "boba_u4.wav" },
+                new SwitchModel { Id = 6, Name = "키크론 저소음 바나나", Category = "Silent", Type = "Tactile", Pressure = 55, SoundFilePath = "boba_u4.wav" },
 
                 // [반저소음 - 리니어]
                 new SwitchModel { Id = 7, Name = "Haimu 어쩌구 1", Category = "SemiSilent", Type = "Linear", Pressure = 35, SoundFilePath = "semi_35g.wav" },

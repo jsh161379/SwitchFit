@@ -122,7 +122,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(26, 46);
+            label3.Location = new Point(26, 48);
             label3.Name = "label3";
             label3.Size = new Size(31, 15);
             label3.TabIndex = 1;
@@ -132,7 +132,7 @@
             // 
             cboFilterType.FormattingEnabled = true;
             cboFilterType.Items.AddRange(new object[] { "전체", "리니어", "택타일" });
-            cboFilterType.Location = new Point(83, 43);
+            cboFilterType.Location = new Point(83, 45);
             cboFilterType.Name = "cboFilterType";
             cboFilterType.Size = new Size(121, 23);
             cboFilterType.TabIndex = 0;
@@ -177,7 +177,7 @@
             // 
             // btnSearchCoupang
             // 
-            btnSearchCoupang.Location = new Point(86, 409);
+            btnSearchCoupang.Location = new Point(82, 405);
             btnSearchCoupang.Name = "btnSearchCoupang";
             btnSearchCoupang.Size = new Size(131, 37);
             btnSearchCoupang.TabIndex = 3;
@@ -187,7 +187,7 @@
             // 
             // btnSearchNaver
             // 
-            btnSearchNaver.Location = new Point(223, 409);
+            btnSearchNaver.Location = new Point(219, 405);
             btnSearchNaver.Name = "btnSearchNaver";
             btnSearchNaver.Size = new Size(131, 37);
             btnSearchNaver.TabIndex = 3;

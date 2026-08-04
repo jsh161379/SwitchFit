@@ -27,7 +27,7 @@ namespace SwitchFit
         public static Color TextPrimary = Color.FromArgb(30, 41, 59);         // 메인 글자
         public static Color TextSecondary = Color.FromArgb(71, 85, 105);      // 서브 글자
 
-        // 1️⃣ 그라데이션 테마 적용 (기본용)
+        // 1️ 그라데이션 테마 적용 (기본용)
         public static void ApplyModernTheme(Control parent)
         {
             if (parent is Form form)
