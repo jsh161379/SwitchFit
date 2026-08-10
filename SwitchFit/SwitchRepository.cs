@@ -31,18 +31,18 @@ namespace SwitchFit
 
                 // [반저소음 - 택타일]
                 new SwitchModel { Id = 10, Name = "HMX 목새 라이트 택타일", Category = "SemiSilent", Type = "Tactile", Pressure = 37, SoundFilePath = "221_moksae_light_tactile.mp3" },
-                new SwitchModel { Id = 11, Name = "SPM 새벽축", Category = "SemiSilent", Type = "Tactile", Pressure = 40, SoundFilePath = "spm_dawn_40.wav" },
-                new SwitchModel { Id = 12, Name = "SPM 새벽축", Category = "SemiSilent", Type = "Tactile", Pressure = 48, SoundFilePath = "spm_dawn_48.wav" },
+                new SwitchModel { Id = 11, Name = "KTT 저소음 갈축", Category = "SemiSilent", Type = "Tactile", Pressure = 40, SoundFilePath = "222_silent_brown.mp3" },
+                new SwitchModel { Id = 12, Name = "AKKO 크리미 퍼플", Category = "SemiSilent", Type = "Tactile", Pressure = 55, SoundFilePath = "223_creamy_purple.mp3" },
 
                 // [일반 - 리니어]
-                new SwitchModel { Id = 13, Name = "KTT Kang White", Category = "Normal", Type = "Linear", Pressure = 38, SoundFilePath = "ktt_white.wav" },
-                new SwitchModel { Id = 14, Name = "Gateron Yellow Pro", Category = "Normal", Type = "Linear", Pressure = 42, SoundFilePath = "gat_yellow.wav" },
+                new SwitchModel { Id = 13, Name = "LEOBOG 황축", Category = "Normal", Type = "Linear", Pressure = 34, SoundFilePath = "311_yellow.mp3" },
+                new SwitchModel { Id = 14, Name = "게이트론 G PRO 적축", Category = "Normal", Type = "Linear", Pressure = 44, SoundFilePath = "312_g_pro_red.mp3" },
                 new SwitchModel { Id = 15, Name = "체리 MX2A 흑축", Category = "Normal", Type = "Linear", Pressure = 60, SoundFilePath = "313_cherry_mx2a.mp3" },
 
                 // [일반 - 택타일]
-                new SwitchModel { Id = 16, Name = "Akko Lavender Purple", Category = "Normal", Type = "Tactile", Pressure = 36, SoundFilePath = "akko_purple.wav" },
-                new SwitchModel { Id = 17, Name = "Holy Panda", Category = "Normal", Type = "Tactile", Pressure = 42, SoundFilePath = "holy_panda.wav" },
-                new SwitchModel { Id = 18, Name = "Gateron Baby Kangaroo", Category = "Normal", Type = "Tactile", Pressure = 59, SoundFilePath = "baby_kangaroo.wav" }
+                new SwitchModel { Id = 16, Name = "오테뮤 페어", Category = "Normal", Type = "Tactile", Pressure = 35, SoundFilePath = "321_pear.mp3" },
+                new SwitchModel { Id = 17, Name = "하이무 MP 택타일", Category = "Normal", Type = "Tactile", Pressure = 42, SoundFilePath = "322_mp_tactile.mp3" },
+                new SwitchModel { Id = 18, Name = "체리 MX2A 갈축", Category = "Normal", Type = "Tactile", Pressure = 55, SoundFilePath = "323_mx2a_brown.mp3" }
             };
         }
 
